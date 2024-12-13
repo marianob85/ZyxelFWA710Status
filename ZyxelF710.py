@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     data = telnet(args)
     objects = {}
-    values = ["Cell ID", "RFCN", "RSSI", "RSRP", "RSRQ", "SINR", "TAC"]
+    values = ["Cell ID", "RFCN", "RSSI", "RSRP", "RSRQ", "SINR", "TAC", "RI", "MCS"]
     for line in data.splitlines():
         for value in values:
             search_line = ( rf'^{value}:(.+)' )
